@@ -2,24 +2,33 @@
   margin-bottom: 30px;
   margin-left: 2px;
 }
+
 .music .text {
   padding: 0 30px;
 }
+
 .music .images {
-  width: 320px;
-  height: 220px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
+
 .music img {
-  width: 320px;
-  height: 220px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
   object-fit: cover;
 }
+
 .music h1 {
   font-size: 22px;
 }
+
+/* Responsivo */
 @media screen and (max-width: 768px) {
-  .music img,
-  .music .images {
-    height: 350px;
+  .music .images,
+  .music img {
+    width: 100%;
+    height: auto;
   }
 }

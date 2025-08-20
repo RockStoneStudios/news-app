@@ -1,25 +1,34 @@
 .popular .box {
   background-color: #fff;
   display: flex;
-  /* #18  copy*/
-  /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;*/
   position: relative;
   margin: 15px 15px 15px 0;
-  /*box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;*/
+  flex-direction: row; /* por defecto horizontal */
 }
+
 .popular .images {
   position: relative;
   height: 150px;
+  flex: 0 0 150px; /* fija el ancho en escritorio */
 }
+
 .popular img {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
+
+.popular .text {
+  flex: 1;
+  padding: 10px;
+}
+
 .popular .text h1 {
   padding: 20px 0 0 20px;
   margin: 0;
+  font-size: 1.2rem;
 }
+
 .popular .date {
   margin-top: 15px;
   padding: 0 0 0 20px;
@@ -29,4 +38,32 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 0 0 20px;
   margin-top: 5px;
+}
+
+/* 🔹 Responsive: para pantallas menores de 768px */
+@media (max-width: 768px) {
+  .popular .box {
+    flex-direction: column; /* de lado a lado -> en columna */
+  }
+
+  .popular .images {
+    width: 100%;
+    height: 200px; /* más alto en móvil */
+    flex: unset;
+  }
+
+  .popular img {
+    height: 200px;
+  }
+
+  .popular .text h1 {
+    padding: 10px 0 0 10px;
+    font-size: 1rem; /* más pequeño en móvil */
+  }
+
+  .popular .date,
+  .popular .comment {
+    padding-left: 10px;
+    font-size: 0.9rem;
+  }
 }

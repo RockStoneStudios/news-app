@@ -1,24 +1,32 @@
 .head {
   cursor: pointer;
 }
+
 .head .logo img {
-  width: 500px;
+  width: 100%;         /* ocupa todo el contenedor */
+  max-width: 500px;    /* no se pasa de 500px en escritorio */
+  height: auto;        /* mantiene proporción */
 }
+
 header {
   background-color: #000;
   color: #fff;
 }
+
 header li {
   margin-right: 30px;
   transition: 0.5s;
 }
+
 header li:hover {
   color: crimson;
   cursor: pointer;
 }
+
 header a {
   color: #fff;
 }
+
 .barIcon {
   font-size: 25px;
   background: none;
@@ -26,6 +34,7 @@ header a {
   display: none;
   border: none;
 }
+
 @media screen and (max-width: 768px) {
   .head .ad {
     display: none;
@@ -58,5 +67,10 @@ header a {
   }
   header ul li {
     margin-bottom: 30px;
+  }
+
+  /* Logo más pequeño en móvil */
+  .head .logo img {
+    max-width: 200px; /* ajusta según tu diseño */
   }
 }
