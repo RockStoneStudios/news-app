@@ -6,25 +6,66 @@
 
 .discover .box {
   background-color: #fff;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 4%), 0 0 2px rgb(0 0 0 / 6%), 0 0 1px rgb(0 0 0 / 4%);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 4%), 
+              0 0 2px rgb(0 0 0 / 6%), 
+              0 0 1px rgb(0 0 0 / 4%);
 }
+
 .discover .img {
   width: 150px;
   height: 100px;
 }
+
 .discover img {
   width: 200px;
   height: 100px;
   object-fit: cover;
 }
+
 .discover h1 {
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
 }
+
+/* Tablets medianos */
+@media screen and (max-width: 1024px) {
+  .discover .content {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  .discover img,
+  .discover .img {
+    width: 180px;
+    height: 120px;
+  }
+}
+
+/* Tablets y móviles grandes */
 @media screen and (max-width: 768px) {
   .discover .content {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .discover img,
+  .discover .img {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+  .discover .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .discover img,
+  .discover .img {
+    width: 100%;
+    height: auto;
+  }
+  .discover h1 {
+    font-size: 14px;
   }
 }

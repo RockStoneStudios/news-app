@@ -37,20 +37,20 @@ const Footer = () => {
             </div>
           </div>
           <div className='box'>
-            <h3>LABELS</h3>
+            <h3>Etiquetas</h3>
             {/*<i className='fa fa-chevron-right'></i>*/}
             <ul>
               <li>
-                <span>Boxing</span> <label>(5)</label>
+                <span>Politica</span> <label>(5)</label>
               </li>
               <li>
-                <span>Fashion</span> <label>(6)</label>
+                <span>Moda</span> <label>(6)</label>
               </li>
               <li>
-                <span>Health</span> <label>(7)</label>
+                <span>Salud</span> <label>(7)</label>
               </li>
               <li>
-                <span>Nature</span> <label>(9)</label>
+                <span>Naturaleza</span> <label>(9)</label>
               </li>
             </ul>
           </div>
